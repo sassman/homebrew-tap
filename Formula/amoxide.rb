@@ -1,25 +1,25 @@
 class Amoxide < Formula
   desc "Shell alias manager — manage aliases globally via profiles or per-project"
   homepage "https://github.com/sassman/amoxide-rs"
-  version "0.6.1"
+  version "0.7.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.6.1/amoxide-aarch64-apple-darwin.tar.xz"
-      sha256 "ab7856973f69b2368430e7af50af789978cd651fe49120b6acb7c006fe9daca3"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.7.0/amoxide-aarch64-apple-darwin.tar.xz"
+      sha256 "49a369ea253d58dff881dcc892df9dcef41e0fe23b673ffbbdc9b20ed9ebab7d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.6.1/amoxide-x86_64-apple-darwin.tar.xz"
-      sha256 "25513260b1e9fa9035b65e0c079abe2b01232ddddd18ed9108d24c00f049dccc"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.7.0/amoxide-x86_64-apple-darwin.tar.xz"
+      sha256 "43b7313538570c746678e2c7ad28516ff7c8ebf12979da135173302734bf5e6a"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.6.1/amoxide-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "064c840c719d577280b925c044d0c29335698de17664f025ae8e8206bde29a6e"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.7.0/amoxide-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "6961061ee2d4bd494413a097a45af241a44fd9569aed32ebbdc483a9b1ff0f9c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.6.1/amoxide-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f535c38e4b4e6ecf2fe8963ed9ba21c8c4899b5f7d8ebd5ede88dd45281b712a"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.7.0/amoxide-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "cf66d0b7bb51562e1a8763de0d3b011bcde996910e48895b460e6c5406067bda"
     end
   end
   license "GPL-3.0-only"
