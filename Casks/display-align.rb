@@ -1,8 +1,8 @@
 cask "display-align" do
-  version "1.0.1"
-  sha256 "3e20daef4065a19606439b8afa057d9ad37e33bd181287aeabd2c0516f3c2e65"
+  version "1.1.0"
+  sha256 "dfb437010f79c18aab5bb2cfc44e6bb1e0936290142cd3c1f12c69ddaf6a14c8"
 
-  url "https://github.com/sassman/display-align/releases/download/v#{version}/DisplayAlign-v#{version}.zip"
+  url "https://github.com/sassman/display-align/releases/download/v#{version}/DisplayAlign-v#{version}.dmg"
   name "DisplayAlign"
   desc "Automatic display arrangement for macOS"
   homepage "https://github.com/sassman/display-align"
