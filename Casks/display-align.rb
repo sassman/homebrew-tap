@@ -1,6 +1,6 @@
 cask "display-align" do
-  version "1.4.0"
-  sha256 "e79e9ff27396bfb4d646056ac2ecd89a8a8357629d5e6d1ce41a43228aaac8a6"
+  version "1.5.0"
+  sha256 "b297c6fd28273c8b19893e8c738f4bb21bda44fb5338a721c7f8b9b4619bfab7"
 
   url "https://github.com/sassman/display-align/releases/download/v#{version}/DisplayAlign-v#{version}.dmg"
   name "DisplayAlign"
