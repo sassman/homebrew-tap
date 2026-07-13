@@ -7,7 +7,7 @@ cask "display-align" do
   desc "Automatic display arrangement for macOS"
   homepage "https://github.com/sassman/display-align"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "DisplayAlign.app"
 
