@@ -1,31 +1,32 @@
 class Amoxide < Formula
   desc "Shell alias manager — manage aliases globally via profiles or per-project"
   homepage "https://github.com/sassman/amoxide-rs"
-  version "0.10.2"
+  version "0.10.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.2/amoxide-aarch64-apple-darwin.tar.xz"
-      sha256 "b3695fcb885bf4dc2f99d741e9009c688a3e5433c577786129e1b2bbdf643899"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.4/amoxide-aarch64-apple-darwin.tar.xz"
+      sha256 "e8cc0161906ccffdbf63185cc899846ad2ac6d9566f26fa233d75d714ac2994b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.2/amoxide-x86_64-apple-darwin.tar.xz"
-      sha256 "4fda6cbe7103f20fe81ade1d5068d33bb6f9ad97cc8303c5692d3dabfd384c41"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.4/amoxide-x86_64-apple-darwin.tar.xz"
+      sha256 "f02bd0a75097bdde348cde0f97bfc44c58202d2e48634a31bf516217aa808f28"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.2/amoxide-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "9a7e7ffb9b6e9bf9607b94f3082c12c946ce4132338c94fa7df7a212b7d5539b"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.4/amoxide-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "1eefd9612eac913582769844e4cec6e8b29d709f6853fa1e84f0095640de0d18"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.2/amoxide-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "532b1c4ae0be39efbb6a350edaa88efcd493d760f2ea8b31584cb3a4dc92ecce"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.4/amoxide-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "763cc6529f9603511869bf91a7f6ce3d62b048f8b477d8065ea7814735b07a08"
     end
   end
   license "GPL-3.0-only"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":               {},
+    "aarch64-pc-windows-gnu":             {},
     "aarch64-unknown-linux-gnu":          {},
     "aarch64-unknown-linux-musl-dynamic": {},
     "aarch64-unknown-linux-musl-static":  {},
