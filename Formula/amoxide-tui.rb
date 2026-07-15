@@ -1,31 +1,32 @@
 class AmoxideTui < Formula
   desc "Interactive TUI for amoxide — manage aliases and profiles visually"
   homepage "https://github.com/sassman/amoxide-rs"
-  version "0.10.2"
+  version "0.10.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.2/amoxide-tui-aarch64-apple-darwin.tar.xz"
-      sha256 "a993e958a7a056ce099ce0687a29aab154ca3e7c014366b2f0bb4ee086347c30"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.4/amoxide-tui-aarch64-apple-darwin.tar.xz"
+      sha256 "0ac2621c737667ae04d31a3651d514ff0e1cd2967b0e339716553e2d47821ba2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.2/amoxide-tui-x86_64-apple-darwin.tar.xz"
-      sha256 "117c023e6b318a7d02008e4c65d60d0aaacec2956ad2283505b2599743ffc4bb"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.4/amoxide-tui-x86_64-apple-darwin.tar.xz"
+      sha256 "d906d097246d3c310cf59899a51d3e75955d515bac219aa9c662b1b8cdd5c3b1"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.2/amoxide-tui-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "318489f457dbc229206d14d47aca4d99f52f59a3499345575011b481985158e1"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.4/amoxide-tui-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "9802ba6f856a3aae335c8a97f64c4352fdb208a170bca63deb8bddee1133231f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.2/amoxide-tui-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "a7f3bf1044868072a3127750ecf81efb79c87884114d9209c0ae2475f5f7be78"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.4/amoxide-tui-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "a85a9bbffe4f40e722dc898ef536f19d4cc12b7739e9360fdff7217fa12887d0"
     end
   end
   license "GPL-3.0-only"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":               {},
+    "aarch64-pc-windows-gnu":             {},
     "aarch64-unknown-linux-gnu":          {},
     "aarch64-unknown-linux-musl-dynamic": {},
     "aarch64-unknown-linux-musl-static":  {},
