@@ -1,25 +1,25 @@
 class Amoxide < Formula
   desc "Shell alias manager — manage aliases globally via profiles or per-project"
   homepage "https://github.com/sassman/amoxide-rs"
-  version "0.10.5"
+  version "0.10.6"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.5/amoxide-aarch64-apple-darwin.tar.xz"
-      sha256 "cd792e26e46c7a762ad9184d28f3e543608e1603e3f7c59149650bddcc89a436"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.6/amoxide-aarch64-apple-darwin.tar.xz"
+      sha256 "e4993c38a30fe0bcc43085a4d1c9c163c4acb54d395fe451f419a0e5d3a23a09"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.5/amoxide-x86_64-apple-darwin.tar.xz"
-      sha256 "632536dbb45906af5303eb71d92919044ec634de814bb8a5032a3356132fdae2"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.6/amoxide-x86_64-apple-darwin.tar.xz"
+      sha256 "f8b24fdf06740fb0009dafacb61aeb497de801d665a67fc14db6f31a12d537e1"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.5/amoxide-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "5477cecc94bf310644bdb11e37a7425ecc8e31724b7e1a6aee7660c88470b3e2"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.6/amoxide-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "4b3db7cf4bd8c3e65a12031a8df3bef05841d4969614fefa607102036001a5a0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.5/amoxide-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "1635da50f8a8c3bc7fe34d8b6aa3edcf9bb2593234524bd221d3b00d68e9d2e4"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.6/amoxide-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "fe2d9b17c3fc07379f3cbe177fe851afbce2f53525d43afafe5812a0257afcc1"
     end
   end
   license "GPL-3.0-only"
@@ -53,10 +53,18 @@ class Amoxide < Formula
   end
 
   def install
-    bin.install "am" if OS.mac? && Hardware::CPU.arm?
-    bin.install "am" if OS.mac? && Hardware::CPU.intel?
-    bin.install "am" if OS.linux? && Hardware::CPU.arm?
-    bin.install "am" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "am"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "am"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "am"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "am"
+    end
 
     install_binary_aliases!
 
