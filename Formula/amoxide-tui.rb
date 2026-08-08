@@ -1,25 +1,25 @@
 class AmoxideTui < Formula
   desc "Interactive TUI for amoxide — manage aliases and profiles visually"
   homepage "https://github.com/sassman/amoxide-rs"
-  version "0.10.5"
+  version "0.10.6"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.5/amoxide-tui-aarch64-apple-darwin.tar.xz"
-      sha256 "0b528541a8953c1c5e1164a398fb3923a01acb9bf9cb3f474ec78d56558114e4"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.6/amoxide-tui-aarch64-apple-darwin.tar.xz"
+      sha256 "2795ba150c909eece1238baa5d99edeb3818ee84677477f6cbd48a32faab2594"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.5/amoxide-tui-x86_64-apple-darwin.tar.xz"
-      sha256 "516753f6409b04a0efba6e8ddb6052cdd7568f63fc8ee47c24307ff66d9c3eb9"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.6/amoxide-tui-x86_64-apple-darwin.tar.xz"
+      sha256 "208ac77560ab9c849afd73a4751e6245cd089c45b22cd8275032b2e391b9d6df"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.5/amoxide-tui-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "8dc63eb0a9b40a52637949e2f99ddd90c0efa87937c826c718c0ce7d2ece9da4"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.6/amoxide-tui-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "0b3b60e497d9d2c3465493f3ab148958a933e52e745da37881276c56943be6ff"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.5/amoxide-tui-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "7ad88224c7c308dab9c2bc4bea65ada429662c0022f34d306830af168de292a7"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.6/amoxide-tui-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "4df0bbaaefb6b9308b222939391e176d1446b10fd852b4b3e7756647e1b94e02"
     end
   end
   license "GPL-3.0-only"
