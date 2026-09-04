@@ -1,25 +1,25 @@
 class AmoxideTui < Formula
   desc "Interactive TUI for amoxide — manage aliases and profiles visually"
   homepage "https://github.com/sassman/amoxide-rs"
-  version "0.10.6"
+  version "0.10.7"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.6/amoxide-tui-aarch64-apple-darwin.tar.xz"
-      sha256 "2795ba150c909eece1238baa5d99edeb3818ee84677477f6cbd48a32faab2594"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.7/amoxide-tui-aarch64-apple-darwin.tar.xz"
+      sha256 "8a655f1611ee6f5c0b518ebd27fd58710521ec3d1df891e154e8ddf4da9324c5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.6/amoxide-tui-x86_64-apple-darwin.tar.xz"
-      sha256 "208ac77560ab9c849afd73a4751e6245cd089c45b22cd8275032b2e391b9d6df"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.7/amoxide-tui-x86_64-apple-darwin.tar.xz"
+      sha256 "91615e77f632d5736a66b1544ab3260fb1b3c7e25cab46fbf1d2ac00d99c53ad"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.6/amoxide-tui-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "0b3b60e497d9d2c3465493f3ab148958a933e52e745da37881276c56943be6ff"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.7/amoxide-tui-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "88dabf58b7481fd294a0f88a0c1cc8df62bc2728540c4206f41e49bcc4253a31"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.6/amoxide-tui-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "4df0bbaaefb6b9308b222939391e176d1446b10fd852b4b3e7756647e1b94e02"
+      url "https://github.com/sassman/amoxide-rs/releases/download/v0.10.7/amoxide-tui-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "ea67e2176d5eb0b0651a8d9bc2c562985376f6d6cf5ea8dd71173186f4525f01"
     end
   end
   license "GPL-3.0-only"
@@ -53,10 +53,18 @@ class AmoxideTui < Formula
   end
 
   def install
-    bin.install "am-tui" if OS.mac? && Hardware::CPU.arm?
-    bin.install "am-tui" if OS.mac? && Hardware::CPU.intel?
-    bin.install "am-tui" if OS.linux? && Hardware::CPU.arm?
-    bin.install "am-tui" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "am-tui"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "am-tui"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "am-tui"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "am-tui"
+    end
 
     install_binary_aliases!
 
