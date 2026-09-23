@@ -1,13 +1,13 @@
 cask "display-align" do
-  version "1.7.0"
-  sha256 "30df31b8d371fe051841eca5d0ca47aa315491dfa7319837e581b08ce6950c2c"
+  version "1.7.1"
+  sha256 "453178a69e08ceb4e662900fad41aa602dcffeca0915b0e9ca8714b57c08815f"
 
   url "https://github.com/sassman/display-align/releases/download/v#{version}/DisplayAlign-v#{version}.zip"
   name "DisplayAlign"
   desc "Automatic display arrangement for macOS"
   homepage "https://github.com/sassman/display-align"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "DisplayAlign.app"
 
