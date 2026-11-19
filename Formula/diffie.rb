@@ -1,20 +1,20 @@
 class Diffie < Formula
   desc "Fast diff review tool"
   homepage "https://github.com/sassman/diffie-rs"
-  version "0.2.1"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/sassman/diffie-rs/releases/download/v0.2.1/diffie-aarch64-apple-darwin.tar.xz"
-      sha256 "7f937af4693c4be9d97aaf372fb474122c90e057583e5ce36f407e6091288085"
+      url "https://github.com/sassman/diffie-rs/releases/download/v0.3.0/diffie-aarch64-apple-darwin.tar.xz"
+      sha256 "7d2b46e0e57a9bbee55004ea6530bf75645a076bd0de47f50f24222411ee670b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sassman/diffie-rs/releases/download/v0.2.1/diffie-x86_64-apple-darwin.tar.xz"
-      sha256 "d998ecdba25377c91d6d6ee2669de6e0f2bbfb18319d506644708c3f21fedd72"
+      url "https://github.com/sassman/diffie-rs/releases/download/v0.3.0/diffie-x86_64-apple-darwin.tar.xz"
+      sha256 "38becc89cfd7243695ecc2af4dfaac085d1962126e16836eef3003ebbd0da0fd"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/sassman/diffie-rs/releases/download/v0.2.1/diffie-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "123f8216d9be3ffddc765ad6e23206aef9bd0e93598cfa68644ece52566430ff"
+    url "https://github.com/sassman/diffie-rs/releases/download/v0.3.0/diffie-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "c3cd95dd9a5a5bd7a5824a9da0a41e0e1b3e702c3add67e9750e41893c40c53b"
   end
 
   BINARY_ALIASES = {
